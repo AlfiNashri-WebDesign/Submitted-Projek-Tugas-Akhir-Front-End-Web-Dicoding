@@ -1,4 +1,4 @@
-# Tugas akhir project Back end 2022 diselesaikan dalam 24 jam
+# Tugas akhir project Front End Web 2022 diselesaikan dalam 24 jam
 
 tglnya belum berurutan
 
