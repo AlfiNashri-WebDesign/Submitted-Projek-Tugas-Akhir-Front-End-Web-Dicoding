@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- 
+Name:     Template Tugas Akhir Front-End Web - dicoding 
+Designer: Alfi
+Sumber Inspirasi Modifikasi : Izin dari Bang Benidiktus
+Version:  Full Version
+-->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- SEO -->
+	<meta name="description" content="Bagaimana belajar bahasa program dengan benar">
+	<meta name="keywords" content="Belajar coding,decoding belajar web">
+	<meta name="author" content="Alfi">
+    
+	<!-- Spesific agar cepat Crawlers / terindex Bot google-->
+	<meta content='index/follow' name='robots'/>
+	<meta content='index/follow' name='googlebot'/>
+	<meta content='1 days' name='revisit-after'/>
+	<meta content='global' name='distribution'/>
+	<meta content='all-language' http-equiv='Content-Language'/>
+	<meta content='true' name='MSSmartTagsPreventParsing'/>
+	<meta content='index, follow' name='googlebot'/>
+	<meta content='follow, all' name='Googlebot-Image'/>
+	<meta content='follow, all' name='msnbot'/>
+	<meta content='follow, all' name='Slurp'/>
+	<meta content='follow, all' name='ZyBorg'/>
+	<meta content='follow, all' name='Scooter'/>
+	<meta content='all' name='spiders'/>
+	<meta content='all' name='WEBCRAWLERS'/>
+	<meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot' name='search engines'/>
+
+    <!-- Title SEO Friendly-->
+    <title>Bookshelf Apps Dicoding - Tugas Alfi</title> <!--judul-->
+	
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+         <h1 class="head_bar_title">Bookshelf Apps Dicoding - Tugas Alfi</h1>
+    </header>
+    <main>
+        <section class="input-section">
+            <div>
+                <h2>Masukan Buku Baru</h2>
+                <form id="input-buku">
+						<div class="input judul">
+							<label for="inputJudulBuku">Judul</label>
+							<input id="inputJudulBuku" type="text" placeholder="Ketika Cinta Bertasbih" required>
+						</div>
+							<div class="flex-row">
+								<div class="input penulis">
+									<label for="inputPenulisBuku">Penulis</label>
+									<input id="inputPenulisBuku" type="text" placeholder="Habiburahman" required>
+								</div>
+								
+								<!-- tambahan-->
+									<div class="input target">
+										<label for="inputTarget">Target Selesai</label>
+										<input id="inputTarget" type="date" required>
+									</div>
+							<!-- ---------->
+							
+								<div class="input tahun">
+									<label for="inputTahunBuku">Tahun</label>
+									<input id="inputTahunBuku" type="number" placeholder="1" required>
+								</div>
+							</div>
+								<div class="flex-row">
+									<div class="input-checkbox">
+										<label for="dibaca">Selesai dibaca</label>
+										<input id="dibaca" type="checkbox">
+									</div>
+									<div class="button">
+										<button id="input-submit" type="submit">Tambah</button>
+									</div>
+								</div>
+                </form>
+
+                <div class="cari-buku">
+                    <h3>Cari Buku</h3>
+                    <form id="cari-buku">
+                        <input id="inputCariBuku" type="text" placeholder="Judul Buku" >
+                        <button id="cari" type="button">Cari</button>
+						
+						<button type="reset" class="reset-btn"></button>&nbsp;&nbsp;<strong style="color:white;">Reset</strong>
+						
+                    </form>
+                </div>
+            </div>
+        </section>
+		
+        <section class="book-shelf">
+            <h2>Belum Selesai Dibaca</h2>
+            <div class="book-list" id="belumDibaca">
+                <!--
+                daftar buku
+                -->
+            </div>
+        </section>
+		
+        <section class="book-shelf">
+            <h2>Selesai Dibaca</h2>
+            <div class="book-list" id="telahDibaca">
+                <!--
+                daftar buku
+                -->
+            </div>
+        </section>
+		
+		<!-- Muncul saat edit -->
+        <section class="edit-section" hidden>
+            <div class="edit-form">
+			
+                <button id="closeForm">X</button>
+				
+                <form id="edit-buku">
+                    <h3>Edit Buku</h3>
+                    <div class="input judul">
+                        <label for="editJudulBuku">Judul</label>
+                        <input id="editJudulBuku" type="text" required>
+                    </div>
+							<div class="flex-row">
+								<div class="input penulis">
+									<label for="editPenulisBuku">Penulis</label>
+									<input id="editPenulisBuku" type="text" required>
+								</div>
+								
+								<!-- ketika mau input ke storage harus urutan sama -->
+								<div class="input waktu">   <!-- tambahan -->
+									<label for="editWaktuBuku">Waktu Selesai</label>
+									<input id="editWaktuBuku" type="date" required>  <!-- tanggal typenya -->
+								</div>
+								
+								<div class="input tahun">
+									<label for="editTahunBuku">Tahun</label>
+									<input id="editTahunBuku" type="number" required>
+								</div>
+							
+									
+							</div>
+									<div class="flex-row">
+										<div class="input-checkbox">
+											<label for="editBaca">Selesai dibaca</label>
+											<input id="editBaca" type="checkbox">
+										</div>
+										<div class="button">
+											<button id="edit-submit" type="button">Edit</button>
+										</div>
+									</div>
+                </form>
+            </div>
+        </section>
+		
+    </main>
+	
+    <footer>
+        <div class="footer"> <small>Copyright &copy; 2022 - <a style="color:white;" href="https://dijualrumahjakartatimur.my.id/">Permata Puri 2</a></small></div>
+    </footer>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/dom.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

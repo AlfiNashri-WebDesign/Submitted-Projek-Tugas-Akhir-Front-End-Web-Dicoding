@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body { 
+    background-image: url('../img/library.png'); /* dari css dia baca , keluar masuk ke img maka ada 2 titik didepan */
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #212121;
+    color: white;
+    height: 100%;
+    overflow: hidden;
+}
+
+header {
+    background-color: BLUE;
+    padding: 15px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    -webkit-box-shadow: 3px 6px 20px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 3px 6px 20px 0px rgba(0,0,0,0.5);
+    box-shadow: 3px 6px 20px 0px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    margin: 0 auto;
+}
+
+section { padding: 40px 20px 0 40px; }
+.input-section { flex-basis: 30%; }
+.book-shelf { flex-basis: 35%; }
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+/* warna pada button */
+.input-section h2 { background-color: royalblue; }
+section:nth-child(2) h2 { background-color: orange; }
+section:nth-child(3) h2 { background-color: limegreen; }
+
+.input-section div {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+}
+
+#input-buku { margin-top: 50px; }
+.input { margin: 10px; }
+
+label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.input input {
+    font-size: 18px;
+    padding: 5px 10px 5px 10px;
+    margin-top: 5px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.flex-row { display: flex; }
+.penulis { flex-basis: 80%; }
+.tahun { width: 100px; }
+
+.waktu{ width: 100px; }
+
+form .flex-row:last-child { margin-top: 20px; }
+
+.input-checkbox label {
+    display: inline;
+    margin: 10px;
+}
+
+
+button { cursor: pointer; }
+
+.button {
+    padding-right: 10px;
+    margin-left: auto;
+}
+
+#input-submit { 
+    padding: 5px 15px;
+    font-size: 18px;
+    background-color: rgb(0, 216, 11);
+    color: white;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+#input-submit:hover {
+    background-color: rgb(0, 156, 8);
+    transition: .5s;
+}
+
+/* reset ------------*/
+.reset-btn { /*reset */
+    background: url('../img/reset.png');
+    background-size: contain;
+    width: 20px;
+    height:20px;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+	margin-top: 22px;
+    padding: 0 10px
+}
+
+
+.reset-btn:hover {
+    background: url('../img/reset.png');
+    background-size: contain;
+}
+
+/* cari ----------------- */
+.cari-buku {
+    margin-top: 50px;
+    padding: 0 10px
+}
+
+.cari-buku h3 { text-align: center; }
+
+#cari-buku {
+    position: relative;
+    margin-top: 20px;
+}
+
+#inputCariBuku {
+    font-size: 18px;
+    margin-top: 5px;
+    border-radius: 20px;
+    float: left;
+    padding: 5px 90px 5px 10px;
+    width: 100%;
+}
+
+#cari {
+    font-size: 18px;
+    position: absolute;
+    padding: 5px 10px 5px 10px;
+    top: 5.2px;
+    right: 0;
+    width: 80px;
+    color: white;
+    background-color: orange;
+    border-radius: 0 20px 20px 0;
+    transition: .5s;
+}
+
+#cari:hover {
+    background-color: rgb(182, 118, 0);
+    transition: .5s;
+}
+
+.book-list {
+    background-color:rgb(255,255,0);  /* warna block pada pilihan */
+    height: 400px;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 20px;
+    overflow: auto;
+}
+
+.book-list::-webkit-scrollbar{ width: 8px; }
+.book-list::-webkit-scrollbar-track{
+    background-color: #afafaf;
+    border-radius: 5px;
+}
+.book-list::-webkit-scrollbar-thumb{
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    border: 2px solid #afafaf;
+}
+
+.book-card {
+    width: 100%;
+    min-height: 100px;
+    background-color: #2e2e2e;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.book-title { margin-bottom: 10px; }
+
+.book-details {
+    color: white;
+    font-size: 16px;
+}
+
+.book-details span { font-weight: normal; }
+
+.book-buttons {
+    margin-top: 5px;
+    text-align: right;
+}
+
+.book-buttons button {
+    min-width: 70px;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 20px;
+}
+
+.book-buttons button { transition: .5s; }
+.green-button { border: 3px solid limegreen; }
+.orange-button { border: 3px solid orange; }
+.red-button { border: 3px solid crimson; }
+.book-buttons button:hover { 
+    filter: brightness(50%); 
+    transition: .5s;
+}
+
+.edit-section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.76);
+    padding: 0;
+}
+
+.edit-form {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+}
+
+#closeForm {
+    position: relative;
+    float: right;
+    width: 45px;
+    padding: 10px;
+    font-size: 20px;
+    z-index: 10;
+    top: -10px;
+    left: 10px;
+    border-radius: 50%;
+}
+
+
+/*-------------- */
+#edit-buku {
+    position: relative;
+    background-color: rgba(92, 92, 92, 0.692);
+    padding: 50px 100px;
+    border-radius: 30px;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+}
+
+#edit-buku h3 {
+    font-size: 23px;
+    text-align: center;
+    padding: 25px;
+}
+
+#edit-submit { 
+    padding: 5px 15px;
+    min-width: 100px;
+    font-size: 18px;
+    background-color: rgb(0, 189, 148);
+    color: white;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+#edit-submit:hover {
+    background-color: rgb(0, 117, 82);
+    transition: .5s;
+}
+
+
+
+f.footer a {
+    text-decoration: none;
+}
+
+footer {
+   color: white;
+    font-weight: bold;
+    background-color: #2DBF0B;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+/* --------- mobile --------------*/
+@media all and (max-width: 1100px) {
+
+    body {
+        height: auto;
+        overflow: auto;
+    }
+
+    main {
+        flex-flow: column;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    section { padding: 40px 20px 0 20px; }
+    section:nth-child(2), section:nth-child(3) {
+        margin-top: 50px;
+    }
+
+    .input-section div { position: static; }
+    .edit-section { position: fixed; }
+
+    .edit-form {
+        width: 90%;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #edit-buku {
+        max-width: 700px;
+        padding: 20px;
+    }
+
+    #edit-buku .flex-row { flex-direction: column; }
+    footer { display: block; }
+}
