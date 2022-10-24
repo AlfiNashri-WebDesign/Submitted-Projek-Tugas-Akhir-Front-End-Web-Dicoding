@@ -1,12 +1,9 @@
 # Tugas akhir project Front End Web 2022 diselesaikan dalam 24 jam
 
-tglnya belum berurutan
-
-search gak boleh kosong
-
-search jika gak ada yg ada tulisannya  pemberitahuan  data dicari tidak ada
-
-
+Yg belum dilengkapi :
+# tglnya belum berurutan
+# search gak boleh kosong
+# search jika gak ada yg ada tulisannya  pemberitahuan  data dicari tidak ada
 
 Saran diberikan peninjau:
 Supaya aplikasimu menjadi lebih baik lagi, berikut beberapa catatan terkait submission kamu:
